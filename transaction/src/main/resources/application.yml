@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql-server:3306/blog?useSSL=false&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: honggui5
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+       connectionTimeout:  30000         # 连接超时
+       idleTimeout:  600000              # 闲置超时
+       maxLifetime:  1800000             # 最大生命周期
+       maximumPoolSize:  50              # 最大的缓冲池大小
+       minimumIdle:  10                  # 最小闲置线程
+       validationTimeout:  5000
