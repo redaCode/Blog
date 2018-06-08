@@ -28,7 +28,7 @@ public class TransactionService {
     }
 
     //内部调用@Transactional标志的方法，事务是不会执行的，除非调用的方法也用@Transaction标志
-    @Transactional
+//    @Transactional
     public void execAdd(String value) {
         try {
             add(value);
