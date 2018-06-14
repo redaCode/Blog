@@ -7,3 +7,4 @@
 5. 自定义监听器demo
 6. 反射demo
 7. NIO基础
+8. RabbitMQ java demo
