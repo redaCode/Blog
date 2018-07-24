@@ -14,7 +14,7 @@ public class Recv {
         try {
             Connection conn = factory.newConnection();
             Channel channel = conn.createChannel();
-            channel.queueDeclare(queueName,false,false,false,null);
+            channel.queueDeclare(queueName,true,false,false,null);
             System.out.println("Waiting Message");
             //consumer对象提供一个回调函数，他的作用是缓存到接受到的结果，知道我们调用到他。
             Consumer consumer = new DefaultConsumer(channel) {
