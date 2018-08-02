@@ -5,6 +5,9 @@ package com.reda.concurrent;
  * @author reda
  * @date 7/6/18 9:18 AM
  */
+
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * method修饰非静态方法相当于对对象上锁，修饰静态方法，相当于对类上锁，持有类锁，不会影响对象锁方法的调用
  * 非同步方法的访问不受任何同步块方法的限制
@@ -16,6 +19,7 @@ public class SynchronizedTest {
     public static void main(String[] args) throws InterruptedException {
         Weight weight = new Weight();
         Weight weight2 = new Weight();
+        ReentrantLock lock = new ReentrantLock();
 //        new Thread(() -> Weight.print7()).start();
         Thread.sleep(100);
 //        new Thread(() -> Weight.print8()).start();
